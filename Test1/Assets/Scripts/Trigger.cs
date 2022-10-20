@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,7 +10,7 @@ public class Trigger : MonoBehaviour
     {        
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            int rnd = UnityEngine.Random.Range(0, prefabs.Length);            
+            int rnd = Random.Range(0, prefabs.Length);            
             Instantiate(prefabs[rnd], transform.position, Quaternion.identity);                    
         }        
     }    
