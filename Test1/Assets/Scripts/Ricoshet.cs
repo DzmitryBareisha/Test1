@@ -16,7 +16,7 @@ public class Ricoshet : MonoBehaviour
         moveZ = Random.Range(-1, 2);
         if (moveX == 0 && moveZ == 0)
         {
-            direction = new Vector3(Random.Range(-1, 2) > 0 ? 1 : -1, direction.y, Random.Range(-1, 2));            
+            direction = new Vector3(moveX > 0 ? 1 : -1, direction.y, moveZ);            
         }
         else
         {
@@ -28,14 +28,14 @@ public class Ricoshet : MonoBehaviour
         rb.velocity = direction * speed;
     }    
     private void OnCollisionEnter(Collision collision)
-    {
+    {        
         if (collision.gameObject.CompareTag("WallsX"))
         {
-            direction.x = -direction.x;            
+            direction = Vector3.Reflect(direction, Vector3.right);            
         }
         if (collision.gameObject.CompareTag("WallsZ"))
         {
-            direction.z = -direction.z;            
-        }         
+            direction = Vector3.Reflect(direction, Vector3.forward);            
+        }
     }   
 }

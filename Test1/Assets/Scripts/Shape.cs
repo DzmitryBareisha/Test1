@@ -7,17 +7,14 @@ public class Shape : MonoBehaviour
     private MeshFilter shapeChange;
     [SerializeField] private Mesh[] shapeUse;
     private int currentShape;
-    // Start is called before the first frame update
+    
     void Start()
     {
         shapeChange = GetComponent<MeshFilter>();
     }
     private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("WallsX") || collision.gameObject.CompareTag("WallsZ"))
-        {
-            ChangeShape();
-        }
+    {       
+        ChangeShape();
     }
 
     void ChangeShape()

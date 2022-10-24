@@ -5,11 +5,8 @@ using UnityEngine;
 public class Scale : MonoBehaviour
 {    
     private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("WallsX") || collision.gameObject.CompareTag("WallsZ"))
-        {
-            ChangeScale();
-        }
+    {       
+       ChangeScale();        
     }
     void ChangeScale()
     {
