@@ -2,20 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Color : MonoBehaviour
+public class Color : Changer
 {
     private MeshRenderer meshRenderer;
-   
+
     void Start()
     {
         meshRenderer = GetComponent<MeshRenderer>();
-    }     
-    private void OnCollisionEnter(Collision collision)
-    {        
-        ChangeColor();               
     }
-    void ChangeColor()
+    private void Update()
     {
-        meshRenderer.material.color = Random.ColorHSV();
+        if (change)
+        {
+            ChangeColor();
+        }
+        change = false;        
+    }        
+    void ChangeColor()
+    {       
+            meshRenderer.material.color = Random.ColorHSV();             
     }
 }

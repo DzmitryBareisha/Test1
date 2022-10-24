@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Shape : MonoBehaviour
+public class Shape : Changer
 {
     private MeshFilter shapeChange;
     [SerializeField] private Mesh[] shapeUse;
@@ -12,9 +12,13 @@ public class Shape : MonoBehaviour
     {
         shapeChange = GetComponent<MeshFilter>();
     }
-    private void OnCollisionEnter(Collision collision)
-    {       
-        ChangeShape();
+    private void Update()
+    {
+        if (change)
+        {
+            ChangeShape();
+        }
+        change = false;
     }
 
     void ChangeShape()

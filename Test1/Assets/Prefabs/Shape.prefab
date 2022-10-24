@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: -7395694765457850005}
   - component: {fileID: 2014526496330578025}
   - component: {fileID: 1225076375410343620}
+  - component: {fileID: -1065749326900910633}
   m_Layer: 6
   m_Name: Shape
   m_TagString: Shape
@@ -142,8 +143,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3af8e2f08e28def48b5b17826984dcd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  change: 0
   shapeUse:
   - {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
   - {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
   - {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
   - {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &-1065749326900910633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3911031274228023198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0a9df4ae6cfd664594cf901a414632e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  change: 0
